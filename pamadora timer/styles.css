@@ -1,0 +1,163 @@
+:root {
+  --glow-color: #ea09f1; /* Tomato Red-Orange */
+  --bg-color-dark: #0df848; /* Deep Blue */
+  --bg-color-light: #12f70b;
+  --text-color: #eaeaea;
+  --shadow-color: rgba(226, 19, 174, 0.959); /* Tomato shadow */
+  --shadow-strong-color: rgb(63, 230, 13); /* Stronger Tomato shadow */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color-dark);
+  color: var(--text-color);
+  /* Add a subtle radial gradient for depth */
+  background-image: radial-gradient(
+    circle at center,
+    var(--bg-color-light) 0%,
+    var(--bg-color-dark) 70%
+  );
+}
+
+#time-display {
+  font-family: 'JetBrains Mono', monospace;
+  text-shadow: 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color);
+}
+
+/* Main container for the futuristic look */
+.timer-container {
+  border: 1px solid var(--glow-color);
+  box-shadow: 0 0 25px var(--shadow-color), inset 0 0 15px var(--shadow-color);
+  background: rgba(26, 34, 56, 0.8);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated grid background */
+.timer-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 99, 71, 0.15) 1px,
+      transparent 1px
+    ),
+    /* Tomato grid */
+      linear-gradient(to bottom, rgb(77, 255, 71) 1px, transparent 1px); /* Tomato grid */
+  background-size: 40px 40px;
+  animation: pan-grid 20s linear infinite;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+@keyframes pan-grid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+/* Style for the mode buttons */
+.mode-button {
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px transparent;
+  border-bottom: 2px solid transparent;
+}
+.mode-button.active {
+  color: var(--glow-color);
+  text-shadow: 0 0 8px var(--shadow-color);
+  border-bottom-color: var(--glow-color);
+}
+
+/* Progress Ring Styling */
+#progress-ring-circle {
+  transition: stroke-dashoffset 1s linear;
+  filter: drop-shadow(0 0 5px var(--shadow-color));
+}
+
+/* Decorative Rings and Animations */
+.decorative-ring {
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+#ring-1 {
+  animation-name: rotate-cw;
+  animation-duration: 60s;
+}
+#ring-2 {
+  animation-name: rotate-ccw;
+  animation-duration: 35s;
+}
+
+/* Spinning animation for running timer */
+.timer-running #ring-1 {
+  animation-duration: 20s;
+}
+.timer-running #ring-2 {
+  animation-duration: 12s;
+}
+
+@keyframes rotate-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-ccw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Control Buttons */
+#start-pause-button {
+  background: var(--glow-color);
+  color: var(--bg-color-dark);
+  box-shadow: 0 0 15px var(--shadow-strong-color);
+  transition: all 0.2s ease-in-out;
+}
+#start-pause-button:hover {
+  box-shadow: 0 0 25px var(--shadow-strong-color);
+  transform: translateY(-2px);
+}
+
+#reset-button {
+  border: 1px solid var(--glow-color);
+  color: var(--glow-color);
+  transition: all 0.2s ease-in-out;
+}
+#reset-button:hover {
+  background: var(--shadow-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+/* Subtle pulse for the whole UI */
+.timer-container {
+  animation: pulse 8s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 25px var(--shadow-color), inset 0 0 15px var(--shadow-color);
+  }
+  50% {
+    box-shadow: 0 0 35px var(--shadow-strong-color),
+      inset 0 0 20px var(--shadow-strong-color);
+  }
+  100% {
+    box-shadow: 0 0 25px var(--shadow-color), inset 0 0 15px var(--shadow-color);
+  }
+}

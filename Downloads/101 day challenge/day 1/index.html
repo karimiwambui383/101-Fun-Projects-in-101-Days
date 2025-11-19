@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #0a1a2f; /* Navy background */
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-size: 14rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      background: url('download.jpeg') center/cover no-repeat; /* Replace with your food image */
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; /* 🔥 This makes it work properly in Chrome */
+      text-align: center;
+      letter-spacing: 5px;
+      animation: moveImage 12s ease-in-out infinite alternate;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+      margin-top: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    @keyframes moveImage {
+      0% { background-position: top center; }
+      100% { background-position: bottom center; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <h2>to serenity </h2>
+</body>
+<script src="script.js"></script>
+</html>

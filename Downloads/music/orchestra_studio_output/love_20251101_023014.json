@@ -1,0 +1,38 @@
+{
+  "title": "love",
+  "style": "Ballad Orchestra",
+  "personality": "Billie Eilish Mode",
+  "bpm": 72,
+  "sections": [
+    {
+      "name": "intro",
+      "bars": 4,
+      "start_beat": 0,
+      "intensity": 0.4
+    },
+    {
+      "name": "verse",
+      "bars": 8,
+      "start_beat": 16,
+      "intensity": 0.7
+    },
+    {
+      "name": "build",
+      "bars": 4,
+      "start_beat": 48,
+      "intensity": 0.9
+    },
+    {
+      "name": "drop",
+      "bars": 6,
+      "start_beat": 64,
+      "intensity": 1.0
+    },
+    {
+      "name": "outro",
+      "bars": 2,
+      "start_beat": 88,
+      "intensity": 0.5
+    }
+  ]
+}

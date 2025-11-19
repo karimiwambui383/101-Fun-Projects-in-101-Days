@@ -12,7 +12,7 @@ Each project is short, creative, and full of color — because coding should be 
 |-----|--------|----------|--------------|
 | 1 | ✅ | [Transparent Effect](./Day-01-Transparent-Effect) | A beautiful see-through background effect using CSS! <br> ![Day 1 Preview](Day-01-Transparent-Effect/transparenteffect.jpg) |
 | 2 | ✅ | [Neon Glow Button](./Day-02-Neon-Glow-Button) | A glowing animated button with reflection and hue rotation — cyberpunk vibes all the way! 🎇 <br> *(Day  2/glow-demo.mp4)* |
-| 3 | 🚧 | Coming Soon | ... |
+| 3 | 🚧 | callendar | ... |
 
 ---
 

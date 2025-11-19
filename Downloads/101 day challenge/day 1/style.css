@@ -1,0 +1,70 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #001233; /* deep navy base */
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+/* City background (only visible through text) */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  background: url("https://pixabay.com/photos/city-horizon-skyscraper-rescue-3033169/") no-repeat center center/cover;
+  z-index: 0;
+  transition: transform 1s ease-out;
+}
+
+/* Overlay to darken the rest of the page */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #001233;
+  z-index: 2;
+}
+
+/* Transparent WELCOME text acting as a window */
+.welcome-text {
+  font-size: 14vw;
+  font-weight: 900;
+  letter-spacing: 1vw;
+  color: transparent;
+  background: url("https://pixabay.com/photos/city-horizon-skyscraper-rescue-3033169/") no-repeat center center/cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  mix-blend-mode: screen; /* makes text cut through overlay */
+  text-transform: uppercase;
+  z-index: 3;
+  position: relative;
+  animation: fadeIn 2.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Fade-in animation for text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

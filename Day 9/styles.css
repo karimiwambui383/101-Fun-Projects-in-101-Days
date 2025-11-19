@@ -1,0 +1,159 @@
+/* Apply the fonts via Tailwind config or style block */
+body {
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* Prevent page scroll, only right panel scrolls */
+  cursor: none; /* Hide the default cursor */
+  background-color: #f9fafb; /* bg-gray-50 */
+}
+
+a,
+button {
+  cursor: none; /* Hide default cursor for links too */
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* --- Panel Slide-in Animations --- */
+.panel-left {
+  animation: slideInFromLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  opacity: 0;
+}
+.panel-right {
+  animation: slideInFromRight 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* --- Staggered Content Reveal --- */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Marquee Text Reveal --- */
+.marquee-container {
+  position: relative;
+  height: 1.2em;
+  line-height: 1.2em;
+  overflow: hidden;
+  display: block;
+}
+.marquee-text {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition-delay: var(--delay, 0s);
+}
+.is-visible .marquee-text {
+  transform: translateY(0);
+}
+
+/* --- Scroll-Linked Fade Animation --- */
+#scroll-content {
+  transition: opacity 0.4s ease;
+}
+#scroll-content.is-scrolled {
+  opacity: 0.2;
+}
+
+/* --- Image Preview & Pan-Zoom Effect --- */
+#image-preview-container {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+#preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  filter: grayscale(50%);
+  transition: transform 6s ease-out, opacity 0.5s ease;
+  transform: scale(1.1); /* Start slightly zoomed in */
+}
+#preview-image.is-panning {
+  transform: scale(1) rotate(-1deg); /* Zoom out and rotate slightly on hover */
+}
+
+/* --- Interactive Link Styling --- */
+.preview-link {
+  transition: all 0.3s ease;
+  position: relative;
+}
+.link-text {
+  position: relative;
+  display: inline-block;
+}
+
+/* Animated underline */
+.link-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #14532d;
+  transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.preview-link:hover .link-text::after {
+  width: 100%;
+}
+
+/* Icon styling */
+.link-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+.preview-link:hover .link-icon {
+  transform: translateX(5px);
+}
+
+/* --- Custom Cursor --- */
+.custom-cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #14532d;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  z-index: 9999;
+}
+.custom-cursor-dot.cursor-hover {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(20, 83, 45, 0.3);
+}

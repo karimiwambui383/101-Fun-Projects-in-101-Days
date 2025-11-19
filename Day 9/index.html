@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <!-- === LEFT PANEL (STATIC MESSAGE & IMAGE PREVIEW) === -->
+        <div class="panel-left w-full md:w-5/12 bg-[#14532d] text-white flex items-center justify-center relative p-12 md:h-screen">
+
+            <!-- Image Preview Container (Controlled by JS) -->
+            <div id="image-preview-container" class="hidden md:block">
+                <img id="preview-image" src="" alt="Preview">
+            </div>
+
+            <!-- Static Text with Marquee Reveal -->
+            <div id="scroll-content" class="relative z-10 text-center md:text-left">
+                <h1 class="font-serif text-7xl md:text-8xl lg:text-9xl font-extrabold leading-none">
+                    <span class="marquee-container reveal-item" style="--delay: 0.8s;">
+                        <span class="marquee-text">Thank</span>
+                    </span>
+                    <span class="marquee-container reveal-item" style="--delay: 1s;">
+                        <span class="marquee-text">You.</span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- === RIGHT PANEL (DYNAMIC & SCROLLABLE CONTENT) === -->
+        <div id="scroll-panel" class="panel-right w-full md:w-7/12 bg-gray-50 p-12 md:p-20 md:h-screen md:overflow-y-auto">
+
+            <!-- Intro Message -->
+            <div class="max-w-md">
+                <h2 class="reveal-item text-3xl font-bold text-gray-900 mb-4">
+                    Your request is confirmed, <span id="user-name" class="text-green-800">Friend</span>.
+                </h2>
+                <p class="reveal-item text-lg text-gray-600 mb-12">
+                    We've received your submission and a confirmation email is on its way. While you wait, we invite you to explore more of our world.
+                </p>
+            </div>
+
+            <!-- Interactive "What's Next" List -->
+            <div class="max-w-md">
+                <h3 class="reveal-item text-2xl font-bold text-gray-900 mb-8 border-b border-gray-300 pb-4 flex items-center">
+                    <!-- NEW: Icon added -->
+                    <svg class="w-5 h-5 mr-3 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L6 12Zm0 0h12.75" />
+                    </svg>
+                    Explore Further
+                </h3>
+
+                <nav class="space-y-8">
+                    <!-- Link 1 -->
+                    <a href="#"
+                       class="preview-link reveal-item flex items-center justify-between group"
+                       data-image="https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/AutoLex%20Car%20Dealer%20Website/1.png">
+                        <div>
+                            <span class="link-text text-3xl font-serif text-gray-800 mb-1">Our Story</span>
+                            <p class="text-gray-500 group-hover:text-gray-700">Discover the values and vision behind our brand.</p>
+                        </div>
+                        <!-- Icon -->
+                        <svg class="link-icon text-gray-400 group-hover:text-green-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </a>
+
+                    <!-- Link 2 -->
+                    <a href="#"
+                       class="preview-link reveal-item flex items-center justify-between group"
+                       data-image="https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/AutoLex%20Car%20Dealer%20Website/2.png">
+                        <div>
+                            <span class="link-text text-3xl font-serif text-gray-800 mb-1">Case Studies</span>
+                            <p class="text-gray-500 group-hover:text-gray-700">See how we've helped others like you succeed.</p>
+                        </div>
+                        <!-- Icon -->
+                        <svg class="link-icon text-gray-400 group-hover:text-green-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </a>
+
+                    <!-- Link 3 -->
+                    <a href="#"
+                       class="preview-link reveal-item flex items-center justify-between group"
+                       data-image="https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/AutoLex%20Car%20Dealer%20Website/3.png">
+                        <div>
+                            <span class="link-text text-3xl font-serif text-gray-800 mb-1">The Journal</span>
+                            <p class="text-gray-500 group-hover:text-gray-700">Read our latest insights on industry trends.</p>
+                        </div>
+                        <!-- Icon -->
+                        <svg class="link-icon text-gray-400 group-hover:text-green-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </a>
+
+                    <!-- Link 4 -->
+                    <a href="#"
+                       class="preview-link reveal-item flex items-center justify-between group"
+                       data-image="https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/AutoLex%20Car%20Dealer%20Website/5.png">
+                        <div>
+                            <span class="link-text text-3xl font-serif text-gray-800 mb-1">Join Our Team</span>
+                            <p class="text-gray-500 group-hover:text-gray-700">We're hiring. Explore open roles.</p>
+                        </div>
+                        <!-- Icon -->
+                        <svg class="link-icon text-gray-400 group-hover:text-green-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </a>
+                </nav>
+
+                <!-- Back to Home Button -->
+                <div class="mt-16 reveal-item">
+                    <a href="#" class="inline-flex items-center bg-gray-900 text-white font-medium px-8 py-3 rounded-md shadow-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 group">
+                        <!-- Icon added -->
+                        <svg class="w-5 h-5 mr-2 -ml-1 transition-transform duration-300 group-hover:-translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                        </svg>
+                        Back to Homepage
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Element -->
+    <div class="custom-cursor-dot"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Password Generator</title>
+
+   <!-- Tailwind CSS CDN -->
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- Google Fonts: Inter -->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet" />
+   <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body
+   class="bg-slate-900 text-slate-300 flex items-center justify-center min-h-screen p-4 transition-colors duration-300">
+   <div class="w-full max-w-2xl mx-auto">
+      <header class="text-center mb-8">
+         <h1 class="text-3xl md:text-4xl font-bold text-slate-100">
+            Password Generator
+         </h1>
+         <p class="text-slate-400 mt-2">Create secure and random passwords</p>
+      </header>
+
+      <main class="space-y-6">
+         <!-- Password Display -->
+         <div class="bg-slate-800 rounded-lg p-4 flex items-center justify-between shadow-lg">
+            <span id="password-display"
+               class="font-mono text-xl md:text-2xl text-slate-100 break-all pr-4">P@ssw0rd!</span>
+            <button id="copy-button"
+               class="p-2 rounded-md hover:bg-slate-700 active:scale-95 transition-transform flex-shrink-0">
+               <svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-emerald-400">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+               </svg>
+               <span id="copy-message" class="hidden text-emerald-400 text-sm font-semibold">Copied!</span>
+            </button>
+         </div>
+
+         <!-- Generator Controls -->
+         <div class="bg-slate-800 rounded-lg p-6 shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+               <!-- Left Column: Options -->
+               <div class="space-y-6">
+                  <!-- Character Length -->
+                  <div>
+                     <div class="flex justify-between items-center mb-2">
+                        <label for="length" class="font-semibold text-slate-100">Character Length</label>
+                        <span id="length-value" class="text-2xl font-bold text-emerald-400">12</span>
+                     </div>
+                     <input type="range" id="length" min="4" max="32" value="12" class="w-full" />
+                  </div>
+
+                  <!-- Character Options -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                     <div class="flex items-center space-x-3">
+                        <input type="checkbox" id="uppercase" checked
+                           class="custom-checkbox h-5 w-5 rounded bg-slate-700 border-slate-600 appearance-none transition-colors" />
+                        <label for="uppercase" class="text-slate-200">Uppercase</label>
+                     </div>
+                     <div class="flex items-center space-x-3">
+                        <input type="checkbox" id="lowercase" checked
+                           class="custom-checkbox h-5 w-5 rounded bg-slate-700 border-slate-600 appearance-none transition-colors" />
+                        <label for="lowercase" class="text-slate-200">Lowercase</label>
+                     </div>
+                     <div class="flex items-center space-x-3">
+                        <input type="checkbox" id="numbers" checked
+                           class="custom-checkbox h-5 w-5 rounded bg-slate-700 border-slate-600 appearance-none transition-colors" />
+                        <label for="numbers" class="text-slate-200">Numbers</label>
+                     </div>
+                     <div class="flex items-center space-x-3">
+                        <input type="checkbox" id="symbols"
+                           class="custom-checkbox h-5 w-5 rounded bg-slate-700 border-slate-600 appearance-none transition-colors" />
+                        <label for="symbols" class="text-slate-200">Symbols</label>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Right Column: Strength & Generate Button -->
+               <div class="flex flex-col justify-between mt-6 md:mt-0">
+                  <!-- Password Strength -->
+                  <div class="bg-slate-900 rounded-md p-4 flex items-center justify-between w-full">
+                     <span class="text-slate-400 font-medium">STRENGTH</span>
+                     <div class="flex items-center space-x-2">
+                        <span id="strength-text" class="text-lg font-bold text-slate-100">MEDIUM</span>
+                        <div id="strength-bars" class="flex space-x-1">
+                           <div class="h-6 w-2 rounded-sm bg-slate-700"></div>
+                           <div class="h-6 w-2 rounded-sm bg-slate-700"></div>
+                           <div class="h-6 w-2 rounded-sm bg-slate-700"></div>
+                           <div class="h-6 w-2 rounded-sm bg-slate-700"></div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Generate Button -->
+                  <button id="generate-button"
+                     class="w-full bg-emerald-500 text-slate-900 font-bold py-3 rounded-lg hover:bg-emerald-400 active:scale-95 transition-all duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-400/30 mt-6 md:mt-4">
+                     GENERATE PASSWORD
+                  </button>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>

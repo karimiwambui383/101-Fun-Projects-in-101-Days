@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url(butterfly.jpeg);
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: soft-light;
+	min-height: 100vh;
+}
+
+.card {
+  width: 280px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 7px;
+  border: 1px solid rgba(6, 230, 44, 0.952);
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#month {
+  background: rgb(27, 255, 6);
+  padding: 10px 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#day,
+#year {
+  font-size: 20px;
+}
+
+#date {
+  font-size: 120px;
+  font-weight: 700;
+  margin: -5px 0;
+}

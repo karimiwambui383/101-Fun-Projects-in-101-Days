@@ -1,0 +1,1 @@
+Animated hero section

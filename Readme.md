@@ -21,10 +21,10 @@ Each project is short, creative, and full of color — because coding should be 
 
 🟩 **Completed:** 11 / 101  
 🟨 **In Progress:** 1  
-⬜ **Yet to Start:** 98  
+⬜ **Yet to Start:** 90
 
 ⭐ *Every day a new spark of creativity — one mini-project at a time!*  
-
+           sorry for inconcistnce bt your girl is back 
 ---
 
 ## 💡 About This Challenge

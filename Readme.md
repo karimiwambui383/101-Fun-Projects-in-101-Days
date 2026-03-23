@@ -14,12 +14,12 @@ Each project is short, creative, and full of color — because coding should be 
 | 2 | ✅ | [Neon Glow Button](./Day-02-Neon-Glow-Button) | A glowing animated button with reflection and hue rotation — cyberpunk vibes all the way! 🎇 <br> *(Day  2/glow-demo.mp4)* |
 | 3 | 🚧 | callendar | ... |
 | 4 | dd |
-
+| 11|   | snake game | >>>>|
 ---
 
 ## 📅 Progress Tracker
 
-🟩 **Completed:** 2 / 101  
+🟩 **Completed:** 11 / 101  
 🟨 **In Progress:** 1  
 ⬜ **Yet to Start:** 98  
 

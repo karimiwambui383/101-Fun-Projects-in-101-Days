@@ -6,7 +6,7 @@
 ![GitHub Stars](https://img.shields.io/github/stars/karimiwambui383/101-Fun-Projects-in-101-Days?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/karimiwambui383/101-Fun-Projects-in-101-Days?style=social)
 
-A creative learning journey documenting 101 days of building fun, interactive mini-projects with **HTML**, **CSS**, and **JavaScript**. Each project explores different concepts from animations and flexboxes to interactive components and creative effects.
+A creative learning journey documenting 101 days of building fun, interactive mini-projects with **HTML**, **CSS**, and **JavaScript**. Each project explores different concepts from animations and transitions to complex layouts and interactive game mechanics!
 
 [View Repository](https://github.com/karimiwambui383/101-Fun-Projects-in-101-Days) • [Report an Issue](https://github.com/karimiwambui383/101-Fun-Projects-in-101-Days/issues) • [Contribute](#contributing)
 
@@ -16,7 +16,7 @@ A creative learning journey documenting 101 days of building fun, interactive mi
 
 ## 📖 About This Challenge
 
-This repository documents my **101-day learning journey**, where each day I create a unique, fun mini-project to strengthen my web development skills. The goal is to learn something new every single day while building a diverse portfolio of interactive web experiences.
+This repository documents my **101-day learning journey**, where each day I create a unique, fun mini-project to strengthen my web development skills. The goal is to learn something new every single day while building a collection of projects to showcase my growth as a developer.
 
 ### 🎯 Objectives
 - ✅ Master **HTML, CSS, and JavaScript** fundamentals
@@ -236,8 +236,8 @@ This project is licensed under the terms specified in the [LICENSE](LICENSE) fil
 ## 📞 Contact & Follow
 
 - **GitHub:** [@karimiwambui383](https://github.com/karimiwambui383)
-- **Email:** [Your Email Here]
-- **Twitter/X:** [Your Handle]
+- **Email:** vwambui108@gmail.com
+- **LinkedIn:** [Your LinkedIn URL]
 
 ---
 
